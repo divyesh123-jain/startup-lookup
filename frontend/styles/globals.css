@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E188FC;
+}
+
+/* Handle on hover */
+
+
 html,
 body {
   padding: 0;
@@ -19,3 +35,11 @@ a {
   box-sizing: border-box;
 }
 
+@layer components{
+  .form-input{
+    @apply  p-1 outline-none h-9 flex-[1] border-[2px] border-gray-400 rounded-[5px];
+  }
+  .form-btn{
+    @apply flex justify-center items-center bg-purple-700 p-1 rounded-[5px] hover:bg-purple-400 border-none outline-none text-white;
+  }
+}
