@@ -5,7 +5,7 @@ import { IoClose } from 'react-icons/io5'
 
 const createnew = () => {
     const [interest,setInterests] = useState([]);
-    const [type, setType] = useState('Investor');
+    const [type, setType] = useState('User');
 
     const removeInterest = (element)=>{
         const newArr = [...interest]
@@ -48,13 +48,15 @@ const createnew = () => {
                                     <input type="text" className='form-input' required placeholder='Last Name' />
                                 </div>
                                 <div className='flex flex-wrap gap-2'>
-                                    <input type="number" className='form-input' required placeholder='Age' />
+                                    <input type="number" className='form-input' min = "18" required placeholder='Age' />
                                     <select className='form-input' name="gender" id="gender">
                                         <option value="">Gender</option>
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                     </select>
                                 </div>
+                                <input type="email" id = "email" required placeholder='Email Address' className='form-input' />
+                                <input type="password" id = "password" required placeholder='Password' className='form-input' />
                                 <select  name="Type of Investor" id="typeofinvestor" className='p-1 border-2 border-gray-400 rounded-[5px]'>
                                     <option value="AngelInvestor">Angel Investor</option>
                                     <option value="VentureCapitalist">Venture Capitalist</option>
@@ -72,7 +74,7 @@ const createnew = () => {
                                     <option value="Fintech">Fintech</option>
                                     <option value="Energy">Energy</option>
                                 </select>
-                                <div className='flex flex-wrap gap-2'>
+                                <div className='flex my-2 flex-wrap gap-2'>
                                 {interest.map((element)=>{
                                     return(<>
                                         <div key = {element} className='pl-2 gap-[5px] flex items-center bg-purple-300 rounded-xl'>{element}
@@ -83,11 +85,31 @@ const createnew = () => {
                                     </>)
                                 })}
                                 </div>
+                                
                                 <button type='submit' className='form-btn'>Sign Up</button>
                             </form>
                         </>
                         :
-                        <></>}
+                        <>
+                     
+                            <form action="" className='flex flex-col max-w-[400px] flex-wrap gap-2' >
+                                <div className='flex flex-wrap gap-2'>
+                                    <input type="text" className='form-input' required placeholder='First Name' />
+                                    <input type="text" className='form-input' required placeholder='Last Name' />
+                                </div>
+                                <div className='flex flex-wrap gap-2'>
+                                    <input type="number" className='form-input' min = "18" required placeholder='Age' />
+                                    <select className='form-input' name="gender" id="gender">
+                                        <option value="">Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                                <input type="email" className='form-input' required placeholder='Email Address' />
+                                <input type="password" className='form-input' required placeholder='Password' />
+                                <button type='submit' className='form-btn'>Sign Up</button>
+                            </form>
+                        </>}
                 </div>
             </div>
         </>
