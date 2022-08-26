@@ -37,7 +37,7 @@ a {
 
 @layer components{
   .form-input{
-    @apply  p-1 outline-none h-9 flex-[1] border-[2px] border-gray-400 rounded-[5px];
+    @apply  w-full text-gray-500 rounded-[5px] font-[500] text-sm p-1 outline-none border-[1px] border-gray-400 flex-[1];
   }
   .form-btn{
     @apply flex justify-center items-center bg-purple-700 p-1 rounded-[5px] hover:bg-purple-400 border-none outline-none text-white;
