@@ -25,9 +25,7 @@ repo for the website which helps investors and entrepenure to find each other
     <br />
 
     <a href="https://github.com/divyesh123-jain/startup-lookup/edit/main/README.md"><strong>Explore the docs »</strong></a>
-
     <br />
-
     <br />
 
     <!-- /Add Project Link -->
