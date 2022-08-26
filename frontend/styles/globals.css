@@ -55,9 +55,11 @@ a {
     @apply transition-all duration-150
   }
   .dark-shadows{
-  @apply hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.6)] shadow-[5px_5px_0px_0px_rgba(0,0,0,0.6)]
+  @apply border-[1px] border-black hover:shadow-[11px_11px_0px_0px_rgba(0,0,0,0.6)] shadow-[8px_8px_0px_0px_rgba(0,0,0,0.6)]
   }
   .light-shadows{
   @apply hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.4)] shadow-[6px_6px_0px_0px_rgba(0,0,0,0.4)]
   }
+  .nav-link{
+  @apply p-2 text-white hover:bg-white hover:text-black transitionall cursor-pointer rounded-md flex gap-2 items-center}
 }

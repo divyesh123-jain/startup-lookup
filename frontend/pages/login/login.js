@@ -1,16 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {RiLoginBoxFill} from 'react-icons/ri'
 import Link from 'next/link'
 import {login} from '../../functions/loginFunctions';
+import Router from 'next/router';
 
 const Login = () => {
     const[email,setEmail] = useState("");
     const[password,setPassword] = useState("");
     
+    useEffect(()=>{
+      const token = localStorage.getItem("token")
+      if(token){
+        Router.push('/main/profile');
+        return;
+      }
+    },[])
+
     const handleLogin = async(e)=>{
       e.preventDefault();
       const res = await login({email,password});
-      console.log(res);
+      const {authToken} = res;
+      localStorage.setItem("token",authToken);
+      Router.push('/main/profile')
     }
 
   
