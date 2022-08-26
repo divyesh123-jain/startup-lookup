@@ -40,7 +40,7 @@ const Login = () => {
               </>
             )
           })}
-          <button type='submit' className='flex justify-center items-center bg-purple-700 p-1 rounded-[5px] hover:bg-purple-400 border-none outline-none text-white'>Login</button>
+          <button type='submit' className='form-btn'>Login</button>
         </form>
 
       </div>
