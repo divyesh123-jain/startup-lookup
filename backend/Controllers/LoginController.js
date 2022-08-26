@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 require('dotenv').config();
 const { validationResult } = require('express-validator');
+const UserSchema = require('../Schema/UserSchema.js');
 
 const createUser = async (req, res) => {
     const errors = validationResult(req);
@@ -12,30 +13,30 @@ const createUser = async (req, res) => {
         return res.status(400).json({ errors: errors.array() });
     }
     try {
-        const {email,password} = req.body;
-        const existingUser = await Login.findOne({email})
+        const { email, password } = req.body;
+        const existingUser = await Login.findOne({ email })
         if (existingUser) return res.status(401).json({ color: 'red', msg: "User already exists", success: false });
         const salt = await bcrypt.genSalt(10);
         const hashedPass = await bcrypt.hash(password, salt);
-        if(req.body.type==="User"){
-            const { firstname, lastname,type, email,age,gender } = req.body
+        if (req.body.type === "User") {
+            const { firstname, lastname, type, email, age, gender } = req.body
             await UserLogin.create({
                 firstname,
                 lastname,
                 type,
-                password:hashedPass,
+                password: hashedPass,
                 email,
                 age,
                 gender
             })
             console.log("done");
         }
-        else{
-            const {firstname,lastname,age,email,gender,interests,typeOfInvester,noOfStartupsInvestedIn,yearsExp} = req.body
-            await InvesterLogin.create({firstname,lastname,password,age,email,gender,interests,typeOfInvester,noOfStartupsInvestedIn,yearsExp,password:hashedPass})
+        else {
+            const { firstname, lastname, age, email, gender, interests, typeOfInvester, noOfStartupsInvestedIn, yearsExp } = req.body
+            await InvesterLogin.create({ firstname, lastname, password, age, email, gender, interests, typeOfInvester, noOfStartupsInvestedIn, yearsExp, password: hashedPass })
             console.log("done")
         }
-        
+
         res.status(200).json({ color: "green", msg: "User Created Successfully", success: true });
     }
     catch (err) {
@@ -47,9 +48,12 @@ const createUser = async (req, res) => {
 const loginUser = async (req, res) => {
     try {
         if (req.body.password) {
-            const searchUser = await Login.findOne({ username: req.body.username })
+            let searchUser = await UserSchema.findOne({ email: req.body.email })
             if (!searchUser) {
-                return res.status(403).json({ success: false, msg: "User does not exist" })
+                searchUser = await InvesterLogin.findOne({ email: req.body.email })
+                if (!searchUser) {
+                    return res.status(403).json({ success: false, msg: "User does not exist" })
+                }
             }
             const hash = searchUser.password
             const match = await bcrypt.compare(req.body.password, hash)
@@ -57,7 +61,6 @@ const loginUser = async (req, res) => {
             const data = {
                 user: {
                     id: searchUser._id,
-                    type: searchUser.type || 'user'
                 }
             }
             const authToken = jwt.sign(data, process.env.JWT_SECRET);

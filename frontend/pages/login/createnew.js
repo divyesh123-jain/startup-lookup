@@ -3,6 +3,7 @@ import { FcBusinessman, FcManager } from 'react-icons/fc'
 import { MdCreate } from 'react-icons/md'
 import { IoClose } from 'react-icons/io5'
 import { createUser } from '../../functions/loginFunctions'
+import Link from 'next/link'
 
 const createnew = () => {
     const [interest,setInterests] = useState([]);
@@ -17,6 +18,7 @@ const createnew = () => {
     const [noOfStartupsInvestedIn,setnoOfStartupsInvestedIn] = useState();
     const [yearsExp,setYearsExp] = useState();
     const [typeOfInvester,setTypeOfInvester] = useState("");
+
 
     const clear = () => {
         setfirstName("");
@@ -91,6 +93,7 @@ const createnew = () => {
                         </div>
 
                     </div>
+                    <p className='text-sm'>Already have an accound? <span className='text-purple-700'><Link href = '/login/login'>Log in!</Link></span></p>
                     <hr className='mt-2 w-[80%]' />
                     {type === "Invester" ?
                         <>
@@ -109,7 +112,8 @@ const createnew = () => {
                                 </div>
                                 <input type="email" id = "email" value = {email} onChange = {(e)=>setEmail(e.target.value)} required placeholder='Email Address' className='form-input' />
                                 <input type="password" id = "password" value = {password} onChange = {(e)=>setPassword(e.target.value)} required placeholder='Password' className='form-input' />
-                                <select  name="Type of Invester" id="typeofInvester" onChange = {(e)=>setTypeOfInvester(e.target.value)} className='p-1 border-2 border-gray-400 rounded-[5px]'>
+                                <select  name="Type of Invester" id="typeofInvester" className = "form-input" onChange = {(e)=>setTypeOfInvester(e.target.value)}>
+                                    <option value="">What kind of invester are you?</option>
                                     <option value="AngelInvester">Angel Invester</option>
                                     <option value="VentureCapitalist">Venture Capitalist</option>
                                     <option value="CorporateInvester">Corporate Invester</option>
