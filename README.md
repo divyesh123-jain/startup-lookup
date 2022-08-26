@@ -18,9 +18,9 @@ repo for the website which helps investors and entrepenure to find each other
     <!-- /Add Project Link -->
     <a href="projectlink">View Demo</a>
     ·
-    <a href="https://github.com/Tejs1/TBDSkillValley/issues">Report Bug</a>
+    <a href="https://github.com/divyesh123-jain/startup-lookup/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Tejs1/TBDSkillValley/issues">Request Feature</a>
+    <a href="https://github.com/divyesh123-jain/startup-lookup/issues">Request Feature</a>
   </p>
 </div>
 
