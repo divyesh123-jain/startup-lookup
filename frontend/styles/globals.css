@@ -51,4 +51,13 @@ a {
   .form-btn{
     @apply flex justify-center items-center bg-purple-700 p-1 rounded-[5px] hover:bg-purple-400 border-none outline-none text-white;
   }
+  .transitionall{
+    @apply transition-all duration-150
+  }
+  .dark-shadows{
+  @apply hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.6)] shadow-[5px_5px_0px_0px_rgba(0,0,0,0.6)]
+  }
+  .light-shadows{
+  @apply hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.4)] shadow-[6px_6px_0px_0px_rgba(0,0,0,0.4)]
+  }
 }
