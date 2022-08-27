@@ -12,6 +12,10 @@ app.use(express.json());
 
 app.use('/api/v1', LoginRoute);
 
+app.get('/',(req,res)=>{
+    res.send("This works")
+})
+
 try {
     const connection = async () => {
         const setup = await connect(process.env.MONGO_URI)

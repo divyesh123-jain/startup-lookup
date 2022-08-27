@@ -29,7 +29,6 @@ const createUser = async (req, res) => {
                 age,
                 gender
             })
-            console.log("done");
         }
         else {
             const { firstname, lastname, age, email, gender, interests, typeOfInvester, noOfStartupsInvestedIn, yearsExp } = req.body
@@ -60,6 +59,7 @@ const loginUser = async (req, res) => {
             if (!match) return res.status(401).json({ msg: "Wrong Password", success: false })
             const data = {
                 user: {
+                    type:searchUser.type,
                     id: searchUser._id,
                 }
             }
@@ -77,9 +77,16 @@ const loginUser = async (req, res) => {
 
 const getUser = async (req, res) => {
     try {
-        const { uid } = req.body
-        const payload = await Login.findOne({ _id: uid }).select('-password');
-        res.status(200).json({ payload })
+        const { uid,type } = req.body
+        let p
+        if(type==='User'){
+            const payload =await UserSchema.findOne({ _id: uid }).select('-password');
+            res.status(200).json({ payload })
+            return;
+        }
+        const payload = await InvesterLogin.findOne({ _id: uid }).select('-password');
+        res.status(200).json({payload})
+        
     }
     catch (err) {
         res.status(404).json({ msg: "user not found" })
