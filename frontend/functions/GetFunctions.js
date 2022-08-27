@@ -48,3 +48,26 @@ export const getCategory = async (name) => {
         console.log(err)
     }
 }
+
+
+export const getAllInvesters = async () => {
+    try{
+        const res = await fetch(`${url}/api/v1/getallinvesters`)
+        const data =await res.json()
+        return data
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+
+export const getAllUsers = async () => {
+    try{
+        const res = await fetch(`${url}/api/v1/getallusers`)
+        const data =await res.json()
+        return data
+    }
+    catch(err){
+        console.log(err);
+    }
+}

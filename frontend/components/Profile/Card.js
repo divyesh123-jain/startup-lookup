@@ -18,8 +18,8 @@ const Card = ({name,type,id,value}) => {
                     <div className='flex justify-between items-center'>
                         <p className='text-sm'>{type}</p>
                         <p className=" text-gray-700 text-sm dark:text-gray-400">
-                            Valuation : {value}
-                        </p>
+                         {value} Yrs 
+                         </p>
                         </div>
                         <Link href={`/main/dashboard/${name}`} >
                             <div className='absolute transitionall cursor-pointer bg-white self-center -bottom-3 left-[34%] p-[.4545rem] px-6 dark-shadows rounded-xl'>

@@ -77,7 +77,7 @@ const form2 = () => {
                                 </div>
                     {quarterly.map((element) => {
                                     return (
-                                        <div className='flex gap-2'>
+                                        <div key ={element.inflow} className='flex gap-2'>
                                             <input type="number" className='form-input' placeholder={`${element.inflow}`} {...register(`${element.inflow + "Inflow"}`, { required: true })} />
                                             <input type="number" className='form-input' placeholder={`${element.outflow}`} {...register(`${element.inflow + "Outflow"}`, { required: true })} />
                                         </div>

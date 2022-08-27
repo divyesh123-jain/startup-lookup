@@ -36,10 +36,7 @@ const ProfitLoss = ({data}) => {
             {
                 label: 'Inflow',
                 data: [
-                    data?.startup?.["APR21-JUN21Inflow"]/1000,
-                    data?.startup?.["JUL22-SEPT21Inflow"]/1000,
-                    data?.startup?.["OCT21-DEC21Inflow"]/1000,
-                    data?.startup?.["JAN22-MAR22Inflow"]/1000,
+                    1000,5660,1100,4506,2140
                 ],
                 borderColor: 'rgb(10,240,0)',
                 backgroundColor: 'rgba(10,240,0)',
@@ -47,10 +44,7 @@ const ProfitLoss = ({data}) => {
             {
                 label: 'Outflow',
                 data: [
-                    parseInt(data?.startup?.["APR21-JUN21Outflow"])/1000,
-                    parseInt(data?.startup?.["JUL22-SEPT21Outflow"]/1000),
-                    30000000/1000,
-                    parseInt(data?.startup?.["JAN22-MAR22Outflow"]/1000),
+                    1000,2000,4000,5000
                 ],
                 borderColor: 'rgb(128,0,128)',
                 backgroundColor: 'rgb(128,0,128)',

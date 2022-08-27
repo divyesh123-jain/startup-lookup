@@ -44,7 +44,7 @@ const Profile = (props) => {
             <div className='flex'>
                 <Sidebar user={user} />
                 <div className='flex-[1] flex flex-col'>
-                    <Topbar data = {data}  />
+                    <Topbar user ={user} data = {data}  />
                     {cloneElement(props.children, { user: user ,data:data})}
                 </div>
             </div>

@@ -6,14 +6,13 @@ import Stats from './Stats'
 import Doc from './Doc'
 import Profile from './Profile'
 
-const Dashboard = (props) => {
+const Dashboard = () => {
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState({})
-    const [page,setPage] = useState(2)
+    const [page,setPage] = useState(1)
     const router = useRouter();
     const { startup } = router.query
     useEffect(() => {
-
         getData();
     }, [])
 
@@ -40,7 +39,7 @@ const Dashboard = (props) => {
         data.startup &&
         <>
             <Navbar page = {page} setPage = {setPage} data={data} />
-            {page===1?<Stats data = {data} />:page===2?<Doc data = {data}/>:<Profile data= {data} />}
+            {page===1?<Stats data = {data} />:page===2?<Doc data = {data}/>:<Profile data= {data?.uid} />}
             
         </>
     )
