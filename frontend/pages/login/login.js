@@ -9,18 +9,19 @@ const Login = () => {
     const[password,setPassword] = useState("");
     
     useEffect(()=>{
-      const token = localStorage.getItem("token")
+      const token = localStorage.getItem("authToken")
       if(token){
         Router.push('/main/profile');
         return;
       }
+      
     },[])
 
     const handleLogin = async(e)=>{
       e.preventDefault();
       const res = await login({email,password});
       const {authToken} = res;
-      localStorage.setItem("token",authToken);
+      localStorage.setItem("authToken",authToken);
       Router.push('/main/profile')
     }
 
