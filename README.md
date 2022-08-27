@@ -4,13 +4,13 @@ repo for the website which helps investors and entrepenure to find each other
 <br />
 <div align="center">
   <a href="https://github.com/divyesh123-jain/startup-lookup">
-    <img src="./public/logo.png" alt="Logo" width="80" height="80">
+   
   </a>
 
-  <h3 align="center">Codicine</h3>
+  <h3 align="center">Inʌent</h3>
 
   <p align="center">
-    Codicine is a platform which helps investors and entrepenure to connect with eachother
+   Inʌent is a platform which helps investors and entrepenure to connect with eachother
     <br />
     <a href="https://github.com/divyesh123-jain/startup-lookup/edit/main/README.md"><strong>Explore the docs »</strong></a>
     <br />
@@ -53,7 +53,6 @@ repo for the website which helps investors and entrepenure to find each other
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -72,7 +71,12 @@ Use the `BLANK_README.md` to get started.
 ### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-- [![Next][next.js]][next-url]
+
+![1200px-Nextjs-logo svg](https://user-images.githubusercontent.com/97737499/187042159-1fe639c9-ab5b-4541-b433-f5cc67cb202b.png)
+
+![1_vJQobI4oS3MmpTWqerBcKw](https://user-images.githubusercontent.com/97737499/187041936-bd1ae31d-f0a6-4736-9b36-80b224ce4602.png)
+![1_eCoqJKb-QnoxWFPsjyqU0g](https://user-images.githubusercontent.com/97737499/187042120-d9b8968c-fb8b-4372-906c-dca8d80f0928.png)
+![download](https://user-images.githubusercontent.com/97737499/187042125-f3935498-1c10-4ad3-ae5c-20d9f68e6220.png)
 
 
 
@@ -131,10 +135,26 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 
 ## Usage
+![WhatsApp Image 2022-08-27 at 10 59 59 PM](https://user-images.githubusercontent.com/97737499/187041600-7ee4009e-6c61-44e7-bd07-caebd99d2958.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 32 PM](https://user-images.githubusercontent.com/97737499/187041601-65f59ead-c6b6-475c-a98d-06cd53162ce9.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 36 PM](https://user-images.githubusercontent.com/97737499/187041602-e43ab287-72fa-4c9a-b5e4-febdd3e2c5a8.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 37 PM](https://user-images.githubusercontent.com/97737499/187041605-8b43275c-5547-4916-b657-9af5f22ff3ad.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 37 PM (1)](https://user-images.githubusercontent.com/97737499/187041606-fd06dc27-794d-4c9c-acf9-7634ad7c2158.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 39 PM](https://user-images.githubusercontent.com/97737499/187041607-56e67c2f-ecdd-46b3-b00f-5a206a50600e.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 39 PM (1)](https://user-images.githubusercontent.com/97737499/187041608-344d1313-a16d-4300-a336-f6a7dd1efa38.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 40 PM](https://user-images.githubusercontent.com/97737499/187041610-708dad56-5958-4f46-b0c3-992ded5e60b3.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 44 PM](https://user-images.githubusercontent.com/97737499/187041611-dc7cdaac-78f8-4979-826f-66d7eb357f86.jpeg)
+![Screenshot (163)](https://user-images.githubusercontent.com/97737499/187041613-2664ccfd-1d8d-4c1a-9b24-cc45d3ed9606.png)
 
-![Screenshot (159)](https://user-images.githubusercontent.com/97737499/187037062-b433b8b2-9db4-4690-b9be-6646dfff3382.png)
 
-![Screenshot (158)](https://user-images.githubusercontent.com/97737499/187037116-f91cc0a2-c398-4905-ab1f-64373782cba6.png)
+# After Signup
+
+![Screenshot (160)](https://user-images.githubusercontent.com/97737499/187038121-82b4b9f5-2376-4115-8fc8-3ce0dd296407.png)
+
+![Screenshot (161)](https://user-images.githubusercontent.com/97737499/187038128-95012374-34cf-468a-b9e5-97fa580fda51.png)
+
+![Screenshot (162)](https://user-images.githubusercontent.com/97737499/187038186-422af9fe-444e-429c-a080-53eee61f4bfe.png)
+
 
 
 
@@ -186,9 +206,15 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Akash Sharma -  https://twitter.com/heyyakash?t=6ok8IDNvTyR-SA3Jb7L7YQ&s=08
+Divyesh Jain - https://twitter.com/0xDivyesh?t=QH9Plbi3yspn8u3LJREnCg&s=08
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+Project Link: https://github.com/divyesh123-jain/startup-lookup
+
+
+PPT :-https://drive.google.com/file/d/1lzn4KFucqY0NT2onWYTNRAAi887TzfLG/view?usp=sharing
+Video Presentation:-https://drive.google.com/file/d/1smF21d74zndoa4nqZtJQUPsjKTwrSOau/view?usp=sharing
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,6 +232,7 @@ Use this space to list resources you find helpful and would like to give credit 
 - [GitHub Pages](https://pages.github.com)
 - [Font Awesome](https://fontawesome.com)
 - [React Icons](https://react-icons.github.io/react-icons/search)
+- 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
