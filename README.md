@@ -132,9 +132,8 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+![Screenshot (159)](https://user-images.githubusercontent.com/97737499/187037062-b433b8b2-9db4-4690-b9be-6646dfff3382.png)
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
