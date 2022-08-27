@@ -135,7 +135,11 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ![Screenshot (159)](https://user-images.githubusercontent.com/97737499/187037062-b433b8b2-9db4-4690-b9be-6646dfff3382.png)
 
+#if u dont ahve account click on sign up option.  It will send u to the sign up page where you can choose option between investor and entreprenuer, you can create your account.
+
 ![Screenshot (158)](https://user-images.githubusercontent.com/97737499/187037116-f91cc0a2-c398-4905-ab1f-64373782cba6.png)
+
+# After Signup
 
 ![Screenshot (160)](https://user-images.githubusercontent.com/97737499/187038121-82b4b9f5-2376-4115-8fc8-3ce0dd296407.png)
 
