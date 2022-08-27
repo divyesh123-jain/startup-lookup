@@ -9,4 +9,21 @@ const createTask = async(req,res)=>{
     }
 }
 
-module.exports = {createTask}
+const getStartUps = async(req,res)=>{
+    try{
+        const {uid} = req.body;
+        console.log(uid);
+        const data = await Add.find({uid})
+        const allData = await Add.find({})
+        if(data){
+            res.status(200).json({myStartups:data,allStartups:allData})
+            return;
+        }
+        res.status(200).json({allStartups:allData})  
+    }
+    catch(err){
+        res.status(500).json({msg:err})
+    }
+}
+
+module.exports = {createTask,getStartUps}

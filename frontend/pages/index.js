@@ -3,19 +3,29 @@ import Image from 'next/image'
 import Router from "next/router";
 import { useEffect } from 'react';
 // import Login from './Login/Login'
+// import reload from '';
 
-export default function Home(){
+export default function Home() {
 
-  useEffect(()=>{
-    const {pathname} = Router;
-    if(pathname==="/"){
-      Router.push("/login/login")
+  useEffect(() => {
+    const { pathname } = Router;
+    const token = localStorage.getItem("authToken")
+    if (token) {
+      Router.push("/main/profile")
     }
-  },[])
+    else {
+      Router.push('/main/profile')
+    }
 
-  return(
-    <div>Hello</div>
+  }, [])
+
+  return (
+    <div className='grid h-[100vh] place-items-center'>
+      <span class="flex h-10 w-10">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-8 w-8 bg-sky-500"></span>
+      </span>
+    </div>
   )
-} 
-  
-        
+}
+

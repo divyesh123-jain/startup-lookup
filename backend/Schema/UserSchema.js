@@ -9,7 +9,7 @@ const LoginSchema =new Schema({
     type:{type:String,default:"User"},
     age:{type:Number,required:true},
     gender:{type:String,required:true},
-    bioL:{type:String,required:true},
+    bio:{type:String,required:true},
 })
 
 module.exports = mongoose.model('userlogins',LoginSchema);
