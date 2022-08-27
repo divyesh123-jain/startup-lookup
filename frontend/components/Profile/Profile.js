@@ -8,7 +8,7 @@ import Router from 'next/router'
 const Profile = (props) => {
     const [user, setUser] = useState({})
     const [data,setData] = useState({})
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         const token = localStorage.getItem('authToken')
         if(token){
@@ -31,9 +31,10 @@ const Profile = (props) => {
     if (loading) {
         return <div className='h-[100vh] w-full grid place-items-center'>
             <div className='grid h-[100vh] place-items-center'>
-                <span class="flex h-10 w-10">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-8 w-8 bg-sky-500"></span>
+                <span>
+                    <span class="animate-ping absolute inline-flex p-10 rounded-full bg-sky-400 opacity-75">
+                    <span class="relative inline-flex rounded-full h-5 w-5 bg-sky-500"></span>
+                    </span>
                 </span>
             </div>
         </div>

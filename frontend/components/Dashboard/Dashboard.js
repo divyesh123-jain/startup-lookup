@@ -2,13 +2,16 @@ import React, { cloneElement, useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import { useRouter } from 'next/router'
 import { getStartUpByName } from '../../functions/GetFunctions'
-
+import Stats from './Stats'
+import Doc from './Doc'
+import Profile from './Profile'
 
 const Dashboard = (props) => {
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState({})
+    const [page,setPage] = useState(2)
     const router = useRouter();
-
+    const { startup } = router.query
     useEffect(() => {
 
         getData();
@@ -16,7 +19,7 @@ const Dashboard = (props) => {
 
     const getData = async () => {
         
-        const { startup } = router.query
+        
         const res = await getStartUpByName(startup);
         console.log(res);
         setData(res);
@@ -36,8 +39,9 @@ const Dashboard = (props) => {
     return (
         data.startup &&
         <>
-            <Navbar data={data} />
-            {cloneElement(props.children, { data: data })}
+            <Navbar page = {page} setPage = {setPage} data={data} />
+            {page===1?<Stats data = {data} />:page===2?<Doc data = {data}/>:<Profile data= {data} />}
+            
         </>
     )
 }

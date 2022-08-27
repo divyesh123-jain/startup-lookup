@@ -3,6 +3,9 @@ import Inflow from './Inflow'
 import ProfitLoss from './ProfitLoss'
 import Spendings from './Spendings'
 import Tables from './Tables'
+import { useRouter } from 'next/router'
+import Doc from './Doc'
+import Profile from './Profile'
 
 const Stats = ({data}) => {
   return (
