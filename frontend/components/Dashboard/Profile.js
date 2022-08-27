@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Profile = () => {
+const Profile = ({uid}) => {
+    console.log(uid)
   return (
-    <div>Profile</div>
+    <div className='flex font-prosans max-w-[1300px]  mx-auto justify-center items-center mt-5 w-full'>
+        {uid}
+    </div>
   )
 }
 
