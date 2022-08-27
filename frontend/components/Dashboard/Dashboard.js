@@ -1,34 +1,48 @@
-import React from 'react'
-
-import Inflow from './Inflow'
+import React, { cloneElement, useEffect, useState } from 'react'
 import Navbar from './Navbar'
-import ProfitLoss from './ProfitLoss'
-import Spendings from './Spendings'
-import Tables from './Tables'
+import { useRouter } from 'next/router'
+import { getStartUpByName } from '../../functions/GetFunctions'
+import Stats from './Stats'
+import Doc from './Doc'
+import Profile from './Profile'
 
+const Dashboard = (props) => {
+    const [loading, setLoading] = useState(true)
+    const [data, setData] = useState({})
+    const [page,setPage] = useState(2)
+    const router = useRouter();
+    const { startup } = router.query
+    useEffect(() => {
 
-const Dashboard = () => {
-    return (
-        <>
-        <Navbar />
-        <div className='flex font-prosans max-w-[1300px] flex-col gap-10 md:h-[100vh] p-4 mx-auto'>
-            <div className='flex gap-10 flex-[1]'>
-                <Inflow />
-                <ProfitLoss />
+        getData();
+    }, [])
+
+    const getData = async () => {
+        
+        
+        const res = await getStartUpByName(startup);
+        console.log(res);
+        setData(res);
+        setLoading(false);
+    }
+
+    if (loading) {
+        return <div className='h-[100vh] w-full grid place-items-center'>
+            <div className='grid h-[100vh] place-items-center'>
+                <span class="flex h-10 w-10">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-8 w-8 bg-sky-500"></span>
+                </span>
             </div>
-
-            <div className='flex gap-10 flex-[1]'>
-                <Tables />
-                <Spendings />
-            </div>
-
-
         </div>
+    }
+    return (
+        data.startup &&
+        <>
+            <Navbar page = {page} setPage = {setPage} data={data} />
+            {page===1?<Stats data = {data} />:page===2?<Doc data = {data}/>:<Profile data= {data} />}
+            
         </>
-
-
-
-
     )
 }
 

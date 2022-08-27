@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Card = ({name,type,id,value}) => {
     return (
@@ -20,7 +21,11 @@ const Card = ({name,type,id,value}) => {
                             Valuation : {value}
                         </p>
                         </div>
-                        <a href="#" className='absolute transitionall bg-white self-center -bottom-3 left-[34%] p-[.4545rem] px-6 dark-shadows rounded-xl'>View</a>
+                        <Link href={`/main/dashboard/${name}`} >
+                            <div className='absolute transitionall cursor-pointer bg-white self-center -bottom-3 left-[34%] p-[.4545rem] px-6 dark-shadows rounded-xl'>
+                            View
+                            </div>
+                        </Link>
                     
                 </div>
             </div>

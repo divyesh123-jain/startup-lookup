@@ -1,6 +1,6 @@
 import React from 'react'
 import { FiArrowDownLeft, FiArrowUpRight } from 'react-icons/fi'
-const Inflow = () => {
+const Inflow = ({data}) => {
 
     const months = [
         {
@@ -19,6 +19,7 @@ const Inflow = () => {
     ]
 
     return (
+        data&&
         <>
             <div className='flex flex-col flex-[1] gap-3 flex-wrap'>
                 <div className='flex justify-between'>
@@ -44,17 +45,17 @@ const Inflow = () => {
                     <div className='flex flex-col dark-shadows transitionall cursor-pointer rounded-xl justify-center items-center h-[170px] w-[170px] bg-green-400'>
                         <FiArrowDownLeft className='font-extrabold' />
                         <p className='text-[.8rem]'>Inflow</p>
-                        <p className='text-xl font-bold'> &#8377; 80000</p>
+                        <p className='text-xl font-bold'> &#8377; {data?.startup?.inflow}</p>
                     </div>
                     <div className='flex flex-col dark-shadows transitionall cursor-pointer rounded-xl justify-center items-center h-[170px] w-[170px] bg-purple-400'>
                         <FiArrowUpRight className='font-extrabold' />
                         <p className='text-[.8rem]'>Outflow</p>
-                        <p className='text-xl font-bold'> &#8377; 120000</p>
+                        <p className='text-xl font-bold'> &#8377; {data?.startup?.outflow}</p>
                     </div>
                     <div className='flex flex-col dark-shadows transitionall cursor-pointer rounded-xl justify-center items-center h-[170px] w-[170px] bg-black text-white'>
                         <FiArrowDownLeft className='font-extrabold' />
                         <p className='text-[.8rem]'>Net Charges</p>
-                        <p className='text-xl font-bold'> &#8377; 80000</p>
+                        <p className='text-xl font-bold'> &#8377; {data?.startup?.inflow-data?.startup?.outflow}</p>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,9 @@
+import { data } from 'autoprefixer'
 import React from 'react'
 
-const Tables = () => {
+const Tables = ({data}) => {
   return (
+    data &&
     <div className='flex-[1] flex flex-col'>
       <h2 className='text-2xl font-prosansbold'>
         Net income
@@ -13,13 +15,10 @@ const Tables = () => {
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
               <tr>
                 <th scope="col" className="py-3 px-6">
-                  Fiscal Year ?
+                  Metrics
                 </th>
                 <th scope="col" className="py-3 px-6">
-                  2020
-                </th>
-                <th scope="col" className="py-3 px-6">
-                  2021
+                  Observation
                 </th>
               </tr>
             </thead>
@@ -29,10 +28,10 @@ const Tables = () => {
                   scope="row"
                   className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Income
+                  Average Revenue
                 </th>
-                <td className="py-4 px-6">12200</td>
-                <td className="py-4 px-6">120000</td>
+                <td className="py-4 px-6">{data?.startup?.AvgRev}</td>
+                
 
               </tr>
               <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -40,10 +39,10 @@ const Tables = () => {
                   scope="row"
                   className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Expense
+                  Revenue Against Goal
                 </th>
-                <td className="py-4 px-6">13402</td>
-                <td className="py-4 px-6">134560</td>
+                <td className="py-4 px-6">{data?.startup?.RevAgainstGoal} %</td>
+ 
 
               </tr>
               <tr className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -51,10 +50,9 @@ const Tables = () => {
                   scope="row"
                   className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Net Income
+                  Customers
                 </th>
-                <td className="py-4 px-6">11323</td>
-                <td className="py-4 px-6">123124</td>
+                <td className="py-4 px-6">{data?.startup?.Users} </td>
 
               </tr>
             </tbody>

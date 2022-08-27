@@ -35,7 +35,7 @@ const Sidebar = ({user}) => {
                                 <RiMoneyPoundCircleFill />
                                 FinTech</div>
                         </Link>
-                        <Link href='/main/Edtech'>
+                        <Link href='/main/EdTech'>
                             <div className={`nav-link`}>
                                 <GiOpenBook />
                                 EdTech</div>

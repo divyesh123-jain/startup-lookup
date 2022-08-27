@@ -26,4 +26,28 @@ const getStartUps = async(req,res)=>{
     }
 }
 
-module.exports = {createTask,getStartUps}
+const getStartUpsByName = async(req,res)=>{
+    try{
+        const {name} = req.params
+        const startup = await Add.findOne({name})
+        res.status(200).json({startup})
+    }
+    catch(err){
+        res.status(500).json({err})
+    }
+}
+
+const getCategory = async(req,res)=>{
+    try{
+        const {category} = req.params
+        const startup = await Add.find({type:category})
+        res.status(200).json({startup})
+    }
+    catch(err){
+        res.status(500).json({err})
+    }
+}
+
+
+
+module.exports = {createTask,getStartUps,getStartUpsByName,getCategory}

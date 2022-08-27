@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Spendings = () => {
+const Spendings = ({data}) => {
     return (
+        data&&
         <div className='flex-[1] flex flex-col'>
             <h2 className='text-2xl font-prosansbold'>
                 Net Spendings
@@ -15,7 +16,7 @@ const Spendings = () => {
                                     Commodity
                                 </th>
                                 <th scope="col" className="py-3 px-6">
-                                    Net Spendings
+                                    Net Spendings(Rs)
                                 </th>
                            
                             </tr>
@@ -28,7 +29,7 @@ const Spendings = () => {
                                 >
                                     Marketing
                                 </th>
-                                <td className="py-4 px-6">12200</td>
+                                <td className="py-4 px-6">{data?.startup?.expMarketing}</td>
                             
 
                             </tr>
@@ -39,7 +40,7 @@ const Spendings = () => {
                                 >
                                     Employees
                                 </th>
-                                <td className="py-4 px-6">13402</td>
+                                <td className="py-4 px-6">{data?.startup?.expEmployee}</td>
                                 
 
                             </tr>
@@ -50,7 +51,7 @@ const Spendings = () => {
                                 >
                                     Resources
                                 </th>
-                                <td className="py-4 px-6">11323</td>
+                                <td className="py-4 px-6">{data?.startup?.expResources}</td>
 
                             </tr>
                         </tbody>
