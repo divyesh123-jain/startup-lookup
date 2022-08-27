@@ -72,7 +72,8 @@ Use the `BLANK_README.md` to get started.
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 - [![Next][next.js]][next-url]
-
+-
+![1_vJQobI4oS3MmpTWqerBcKw](https://user-images.githubusercontent.com/97737499/187041936-bd1ae31d-f0a6-4736-9b36-80b224ce4602.png)
 
 
 
