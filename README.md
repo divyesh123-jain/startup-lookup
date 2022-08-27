@@ -84,10 +84,20 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+We recommend creating a new Next.js app using create-next-app, which sets up everything automatically for you. To create a project, run:
+npx create-next-app@latest
+# or
+yarn create next-app
+# or
+pnpm create next-app
 
 ### Prerequisites
+
+After the installation is complete:
+
+Run npm run dev or yarn dev or pnpm dev to start the development server on http://localhost:3000
+Visit http://localhost:3000 to view your application
+Edit pages/index.js and see the updated result in your browser
 
 This is an example of how to list things you need to use the software and how to install them.
 
