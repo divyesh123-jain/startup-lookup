@@ -209,7 +209,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 Akash Sharma -  https://twitter.com/heyyakash?t=6ok8IDNvTyR-SA3Jb7L7YQ&s=08
 Divyesh Jain - https://twitter.com/0xDivyesh?t=QH9Plbi3yspn8u3LJREnCg&s=08
 
+
 Project Link: https://github.com/divyesh123-jain/startup-lookup
+
+
+PPT :-https://drive.google.com/file/d/1lzn4KFucqY0NT2onWYTNRAAi887TzfLG/view?usp=sharing
+Video Presentation:-https://drive.google.com/file/d/1smF21d74zndoa4nqZtJQUPsjKTwrSOau/view?usp=sharing
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
