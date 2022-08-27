@@ -28,9 +28,9 @@ const Dashboard = () => {
     if (loading) {
         return <div className='h-[100vh] w-full grid place-items-center'>
             <div className='grid h-[100vh] place-items-center'>
-                <span class="flex h-10 w-10">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-8 w-8 bg-sky-500"></span>
+                <span className="flex h-10 w-10">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-8 w-8 bg-sky-500"></span>
                 </span>
             </div>
         </div>

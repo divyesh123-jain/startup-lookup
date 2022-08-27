@@ -31,7 +31,7 @@ const Login = () => {
       <div className='md:w-[500px] p-5 py-20 h-[100vh] md:h-auto w-full bg-white drop-shadow-lg flex justify-center items-center gap-4 flex-col'>
         <RiLoginBoxFill className='text-purple-700 text-2xl' />
         <h2 className='font-bold text-2xl'>Login to your account</h2>
-        <p className='text-sm'>Don't have a account yet? <span className='text-purple-700'><Link href = '/login/createnew'>Sign up!</Link></span></p>
+        <p className='text-sm'>Don&rsquo;t have a account yet? <span className='text-purple-700'><Link href = '/login/createnew'>Sign up!</Link></span></p>
       
         <form onSubmit={(e)=>handleLogin(e)} className='flex my-4 flex-col gap-4 w-[300px]'>
           <input required type="email" placeholder='Email Address' id ="email" className='form-input' value = {email} onChange = {(e)=>setEmail(e.target.value)} name = "email" />

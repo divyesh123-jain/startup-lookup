@@ -32,7 +32,7 @@ const List = ({ category }) => {
         <div className='flex  gap-5 h-[90vh] overflow-auto flex-wrap p-10'>
             {data?.data.map((element) => {
                 return (
-                    <ProfileCard data={element} />
+                    <ProfileCard key = {data._id} data={element} />
                 )
             })}
 
