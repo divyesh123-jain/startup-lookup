@@ -136,6 +136,13 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ![Screenshot (158)](https://user-images.githubusercontent.com/97737499/187037116-f91cc0a2-c398-4905-ab1f-64373782cba6.png)
 
+![Screenshot (160)](https://user-images.githubusercontent.com/97737499/187038121-82b4b9f5-2376-4115-8fc8-3ce0dd296407.png)
+
+![Screenshot (161)](https://user-images.githubusercontent.com/97737499/187038128-95012374-34cf-468a-b9e5-97fa580fda51.png)
+
+![Screenshot (162)](https://user-images.githubusercontent.com/97737499/187038186-422af9fe-444e-429c-a080-53eee61f4bfe.png)
+
+
 
 
 
