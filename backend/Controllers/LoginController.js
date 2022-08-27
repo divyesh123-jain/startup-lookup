@@ -19,21 +19,21 @@ const createUser = async (req, res) => {
         const salt = await bcrypt.genSalt(10);
         const hashedPass = await bcrypt.hash(password, salt);
         if (req.body.type === "User") {
-            const { firstname, lastname, type, email, age, gender } = req.body
+            const { firstname, lastname, bio,type, email, age, gender } = req.body
             await UserLogin.create({
                 firstname,
                 lastname,
+                bio,
                 type,
                 password: hashedPass,
                 email,
                 age,
                 gender
             })
-            console.log("done");
         }
         else {
-            const { firstname, lastname, age, email, gender, interests, typeOfInvester, noOfStartupsInvestedIn, yearsExp } = req.body
-            await InvesterLogin.create({ firstname, lastname, password, age, email, gender, interests, typeOfInvester, noOfStartupsInvestedIn, yearsExp, password: hashedPass })
+            const { firstname,bio, lastname, age, email, gender, interests, typeOfInvester, noOfStartupsInvestedIn, yearsExp } = req.body
+            await InvesterLogin.create({ firstname, bio,lastname, password, age, email, gender, interests, typeOfInvester, noOfStartupsInvestedIn, yearsExp, password: hashedPass })
             console.log("done")
         }
 
@@ -60,6 +60,7 @@ const loginUser = async (req, res) => {
             if (!match) return res.status(401).json({ msg: "Wrong Password", success: false })
             const data = {
                 user: {
+                    type:searchUser.type,
                     id: searchUser._id,
                 }
             }
@@ -77,9 +78,16 @@ const loginUser = async (req, res) => {
 
 const getUser = async (req, res) => {
     try {
-        const { uid } = req.body
-        const payload = await Login.findOne({ _id: uid }).select('-password');
-        res.status(200).json({ payload })
+        const { uid,type } = req.body
+        let p
+        if(type==='User'){
+            const payload =await UserSchema.findOne({ _id: uid }).select('-password');
+            res.status(200).json({ payload })
+            return;
+        }
+        const payload = await InvesterLogin.findOne({ _id: uid }).select('-password');
+        res.status(200).json({payload})
+        
     }
     catch (err) {
         res.status(404).json({ msg: "user not found" })

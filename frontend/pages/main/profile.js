@@ -1,10 +1,13 @@
 import React from 'react'
-// import Profile from '../../components/Profile/Profile'
+import Main from '../../components/Profile/Main'
+import Profile from '../../components/Profile/Profile'
+
 const profile = () => {
   return (
-    // <div><Profile /></div>
     <>
-    profile
+    <Profile>
+      <Main />
+    </Profile>
     </>
   )
 }

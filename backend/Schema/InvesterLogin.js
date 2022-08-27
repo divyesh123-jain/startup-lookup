@@ -12,7 +12,8 @@ const LoginSchema =new Schema({
     gender:{type:String,required:true},
     noOfStartupsInvestedIn:{type:Number,required:true},
     typeOfInvester:{type:String,required:true},
-    interests:{type:Array,required:true}
+    interests:{type:Array,required:true},
+    bio:{type:String,required:true}
 })
 
 module.exports = mongoose.model('investerlogins',LoginSchema);

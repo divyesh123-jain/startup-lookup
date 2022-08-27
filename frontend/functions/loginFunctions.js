@@ -1,6 +1,8 @@
+const url = "https://startuplookup.herokuapp.com";
+
 export const createUser = async(payload)=>{
     try{
-        const res = await fetch(`http://localhost:5500/api/v1/createuser`,
+        const res = await fetch(`${url}/api/v1/createuser`,
         {
             method:"POST",
             headers:{
@@ -9,8 +11,7 @@ export const createUser = async(payload)=>{
             body:JSON.stringify(payload)
         })
         const data = res.json();
-        return data;
-        
+        return data;   
     }
     catch(err){
         console.log(err)
@@ -19,7 +20,7 @@ export const createUser = async(payload)=>{
 
 export const login = async (payload) => {
     try{
-        const res = await fetch(`http://localhost:5500/api/v1/login`,{
+        const res = await fetch(`${url}/api/v1/login`,{
             method:"POST",
             headers:{
                 'Content-Type':'application/json'
@@ -33,5 +34,39 @@ export const login = async (payload) => {
     }
     catch(err){
         console.log(err)
+    }
+}
+
+export const getUser = async(token)=>{
+    try{
+        const res = await fetch(`${url}/api/v1/getuser`,{
+            method:"GET",
+            headers:{
+                "token":token
+            }
+        })
+        const data = await res.json();
+        return data;
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+
+export const putStartup = async(token,obj)=>{
+    try{
+        const res = await fetch(`${url}/api/v1/startup`,{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json",
+                "token":token
+            },
+            body:JSON.stringify(obj)
+        })
+        const data = await res.json();
+        return data;
+    }
+    catch(err){
+        console.log(err);
     }
 }
