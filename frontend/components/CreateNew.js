@@ -3,6 +3,7 @@ import { FcBusinessman, FcManager } from 'react-icons/fc'
 import { MdCreate } from 'react-icons/md'
 import { IoClose } from 'react-icons/io5'
 import { createUser } from '../functions/loginFunctions'
+import Router from 'next/router'
 import Link from 'next/link'
 
 const CreateNew = () => {
@@ -73,6 +74,8 @@ const CreateNew = () => {
         const res = await createUser(payload);
         if (res.success === true) {
             clear();
+            alert("Account Created Successfully");
+            Router.push('/login/login')
             // const form = document.getElementById("createForm");
             // form.reset();
         }
