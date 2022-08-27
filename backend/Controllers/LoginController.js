@@ -19,10 +19,11 @@ const createUser = async (req, res) => {
         const salt = await bcrypt.genSalt(10);
         const hashedPass = await bcrypt.hash(password, salt);
         if (req.body.type === "User") {
-            const { firstname, lastname, type, email, age, gender } = req.body
+            const { firstname, lastname, bio,type, email, age, gender } = req.body
             await UserLogin.create({
                 firstname,
                 lastname,
+                bio,
                 type,
                 password: hashedPass,
                 email,
@@ -31,8 +32,8 @@ const createUser = async (req, res) => {
             })
         }
         else {
-            const { firstname, lastname, age, email, gender, interests, typeOfInvester, noOfStartupsInvestedIn, yearsExp } = req.body
-            await InvesterLogin.create({ firstname, lastname, password, age, email, gender, interests, typeOfInvester, noOfStartupsInvestedIn, yearsExp, password: hashedPass })
+            const { firstname,bio, lastname, age, email, gender, interests, typeOfInvester, noOfStartupsInvestedIn, yearsExp } = req.body
+            await InvesterLogin.create({ firstname, bio,lastname, password, age, email, gender, interests, typeOfInvester, noOfStartupsInvestedIn, yearsExp, password: hashedPass })
             console.log("done")
         }
 
