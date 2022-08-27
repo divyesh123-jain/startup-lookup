@@ -130,22 +130,16 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 
 ## Usage
-#This is the Login Page Of Our website
-
-![Screenshot (159)](https://user-images.githubusercontent.com/97737499/187037062-b433b8b2-9db4-4690-b9be-6646dfff3382.png)
-
-#if u dont ahve account click on sign up option.  It will send u to the sign up page where you can choose option between investor and entreprenuer, you can create your account.
-
-![Screenshot (158)](https://user-images.githubusercontent.com/97737499/187037116-f91cc0a2-c398-4905-ab1f-64373782cba6.png)
-
-![Screenshot (163)](https://user-images.githubusercontent.com/97737499/187039542-c6889645-8d0d-44c8-952f-afd0d1f7489a.png)
-
-
-![Screenshot (164)](https://user-images.githubusercontent.com/97737499/187039547-90b5bcb2-7faa-4f8b-889c-9e3594004d22.png)
-
-
-![Screenshot (165)](https://user-images.githubusercontent.com/97737499/187039554-0501c3ea-444c-4680-a6cb-d3264563316b.png)
-
+![WhatsApp Image 2022-08-27 at 10 59 59 PM](https://user-images.githubusercontent.com/97737499/187041600-7ee4009e-6c61-44e7-bd07-caebd99d2958.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 32 PM](https://user-images.githubusercontent.com/97737499/187041601-65f59ead-c6b6-475c-a98d-06cd53162ce9.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 36 PM](https://user-images.githubusercontent.com/97737499/187041602-e43ab287-72fa-4c9a-b5e4-febdd3e2c5a8.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 37 PM](https://user-images.githubusercontent.com/97737499/187041605-8b43275c-5547-4916-b657-9af5f22ff3ad.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 37 PM (1)](https://user-images.githubusercontent.com/97737499/187041606-fd06dc27-794d-4c9c-acf9-7634ad7c2158.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 39 PM](https://user-images.githubusercontent.com/97737499/187041607-56e67c2f-ecdd-46b3-b00f-5a206a50600e.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 39 PM (1)](https://user-images.githubusercontent.com/97737499/187041608-344d1313-a16d-4300-a336-f6a7dd1efa38.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 40 PM](https://user-images.githubusercontent.com/97737499/187041610-708dad56-5958-4f46-b0c3-992ded5e60b3.jpeg)
+![WhatsApp Image 2022-08-27 at 10 39 44 PM](https://user-images.githubusercontent.com/97737499/187041611-dc7cdaac-78f8-4979-826f-66d7eb357f86.jpeg)
+![Screenshot (163)](https://user-images.githubusercontent.com/97737499/187041613-2664ccfd-1d8d-4c1a-9b24-cc45d3ed9606.png)
 
 
 # After Signup
