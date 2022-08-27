@@ -4,7 +4,7 @@ repo for the website which helps investors and entrepenure to find each other
 <br />
 <div align="center">
   <a href="https://github.com/divyesh123-jain/startup-lookup">
-    <img src="./public/logo.png" alt="Logo" width="80" height="80">
+   
   </a>
 
   <h3 align="center">Inʌent</h3>
