@@ -14,8 +14,8 @@ ChartJS.register(
 
 
 
-const ProfitLoss = () => {
-    const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const ProfitLoss = ({data}) => {
+    const labels = ['APR 21 - JUN 21','JUL 21 - SEP 21','OCT 21 - DEC 21','JAN 22 - MAR 22'];
     const options = {
         responsive: true,
         maintainAspectRatio: false,
@@ -30,18 +30,28 @@ const ProfitLoss = () => {
         },
       };
 
-      const data = {
+      const dataSets = {
         labels,
         datasets: [
             {
                 label: 'Inflow',
-                data: [100, 200, 300, 100, 500, 200, 100],
+                data: [
+                    data?.startup?.["APR21-JUN21Inflow"]/1000,
+                    data?.startup?.["JUL22-SEPT21Inflow"]/1000,
+                    data?.startup?.["OCT21-DEC21Inflow"]/1000,
+                    data?.startup?.["JAN22-MAR22Inflow"]/1000,
+                ],
                 borderColor: 'rgb(10,240,0)',
                 backgroundColor: 'rgba(10,240,0)',
             },
             {
                 label: 'Outflow',
-                data: [200, 400, 500, 300, 300, 250, 130],
+                data: [
+                    parseInt(data?.startup?.["APR21-JUN21Outflow"])/1000,
+                    parseInt(data?.startup?.["JUL22-SEPT21Outflow"]/1000),
+                    30000000/1000,
+                    parseInt(data?.startup?.["JAN22-MAR22Outflow"]/1000),
+                ],
                 borderColor: 'rgb(128,0,128)',
                 backgroundColor: 'rgb(128,0,128)',
             },
@@ -49,6 +59,7 @@ const ProfitLoss = () => {
     }
     
     return (
+        data&&
         <>
             <div className='flex flex-col gap-3 flex-[1]'>
                 <div className='flex flex-col gap-3 flex-wrap'>
@@ -59,7 +70,7 @@ const ProfitLoss = () => {
                     <p className='text-md'>income and expenses on</p>
                     <div className='mt-4 p-4 rounded-xl transition-all w-full h-[230px] bg-black light-shadows'>
                         <div className='relative h-full w-full overflow-hidden'>
-                            <Line options = {options} data={data} />
+                            <Line options = {options} data={dataSets} />
                         </div>
                     </div>
                 </div>

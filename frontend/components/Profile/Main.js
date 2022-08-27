@@ -24,10 +24,10 @@ const Main = ({ user, data }) => {
       }
       {data?.allStartups?.length != 0 ?
 
-        <div className='mt-10 px-3'>
+        <div className='mt-10 px-3 flex-wrap w-full'>
           <h1 className='text-2xl  font-extrabold font-prosansbold'>Trending Startups</h1>
           <div className='my-4 flex gap-4'>
-            {data?.allStartups?.map((element) => <Card name={element.name} value="2.25Cr" type={element.type} />)}
+            {data?.allStartups?.slice(0,3).map((element) => <Card name={element.name} value="2.25Cr" type={element.type} />)}
           </div>
         </div> :
         <></>

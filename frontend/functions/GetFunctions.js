@@ -15,3 +15,20 @@ export const getStartUps =async () => {
         console.log(err);
     }
 }
+
+export const getStartUpByName = async (name) => {
+    try{
+        const res = await fetch(`${url}/api/v1/startup/getdata/${name}`,{
+            method:"GET",
+            headers:{
+                "Content-Type":"application/json"
+            },
+        })
+
+        const data = await res.json();
+        return data;
+    }
+    catch(err){
+        console.log(err)
+    }
+}
