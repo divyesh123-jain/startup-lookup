@@ -6,7 +6,7 @@ const Main = ({ user, data }) => {
     <div className='p-5 md:h-[90vh] overflow-auto'>
       <div className='w-full rounded-xl bg-green-400 dark-shadows p-4'>
         <h2 className='text-2xl transitionall font-bold font-prosansbold'>Good Afternoon, {user?.payload?.firstname && user?.payload?.firstname}.</h2>
-        <p>Let's have a look a other Entrepreneurs have to offer</p>
+        <p>Let&apos;s have a look at what other Entrepreneurs have to offer</p>
       </div>
 
       {data?.myStartups?.length != 0 ?
