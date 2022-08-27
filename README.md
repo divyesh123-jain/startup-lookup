@@ -7,10 +7,10 @@ repo for the website which helps investors and entrepenure to find each other
     <img src="./public/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Codicine</h3>
+  <h3 align="center">Inʌent</h3>
 
   <p align="center">
-    Codicine is a platform which helps investors and entrepenure to connect with eachother
+   Inʌent is a platform which helps investors and entrepenure to connect with eachother
     <br />
     <a href="https://github.com/divyesh123-jain/startup-lookup/edit/main/README.md"><strong>Explore the docs »</strong></a>
     <br />
@@ -228,6 +228,7 @@ Use this space to list resources you find helpful and would like to give credit 
 - [GitHub Pages](https://pages.github.com)
 - [Font Awesome](https://fontawesome.com)
 - [React Icons](https://react-icons.github.io/react-icons/search)
+- 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
