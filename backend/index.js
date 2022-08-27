@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors');
 const app = express()
 const connect = require("./mongoose/mongoose.js")
-const port = process.env.PORT || 5500;
+const port =process.env.PORT || 5500;
 require('dotenv').config();
 
 const LoginRoute = require('./Routes/LoginRoute.js');
