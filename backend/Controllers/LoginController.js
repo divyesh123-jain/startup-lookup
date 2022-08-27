@@ -34,13 +34,12 @@ const createUser = async (req, res) => {
         else {
             const { firstname,bio, lastname, age, email, gender, interests, typeOfInvester, noOfStartupsInvestedIn, yearsExp } = req.body
             await InvesterLogin.create({ firstname, bio,lastname, password, age, email, gender, interests, typeOfInvester, noOfStartupsInvestedIn, yearsExp, password: hashedPass })
-            console.log("done")
+        
         }
 
         res.status(200).json({ color: "green", msg: "User Created Successfully", success: true });
     }
     catch (err) {
-        console.log(err)
         res.status(500).json({ msg: err, success: false })
     }
 }
@@ -79,7 +78,6 @@ const loginUser = async (req, res) => {
 const getUser = async (req, res) => {
     try {
         const { uid,type } = req.body
-        let p
         if(type==='User'){
             const payload =await UserSchema.findOne({ _id: uid }).select('-password');
             res.status(200).json({ payload })
@@ -93,6 +91,41 @@ const getUser = async (req, res) => {
         res.status(404).json({ msg: "user not found" })
     }
 
+}
+
+const getUserById = async(req,res)=>{
+    try{
+        const {uid} = req.params;
+        const data =await InvesterLogin.findOne({_id:uid});
+        if(!data){
+            const data = await UserSchema.findOne({_id:uid});
+            return res.status(200).json({data})
+        }
+        return res.status(200).json({data})
+    }
+    catch(err){
+        res.status(500).json({err});
+    }
+}
+
+const getAllInvesters = async(req,res)=>{
+    try{
+        const data = await InvesterLogin.find({}).select('-password')
+        res.status(200).json({data})
+    }
+    catch(err){
+        res.status(500).json({err})
+    }
+}
+
+const getAllUsers = async(req,res)=>{
+    try{
+        const data = await UserSchema.find({}).select('-password')  
+        res.status(200).json({data})
+    }
+    catch(err){
+        res.status(500).json({err})
+    }
 }
 
 const updateUser = async (req, res) => {
@@ -123,4 +156,4 @@ const updateUser = async (req, res) => {
 
 
 
-module.exports = { loginUser, createUser, getUser, updateUser }
+module.exports = { loginUser, createUser, getUser, updateUser ,getUserById,getAllUsers,getAllInvesters}

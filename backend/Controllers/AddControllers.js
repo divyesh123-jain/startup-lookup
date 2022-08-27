@@ -12,7 +12,6 @@ const createTask = async(req,res)=>{
 const getStartUps = async(req,res)=>{
     try{
         const {uid} = req.body;
-        console.log(uid);
         const data = await Add.find({uid})
         const allData = await Add.find({})
         if(data){
@@ -47,7 +46,5 @@ const getCategory = async(req,res)=>{
         res.status(500).json({err})
     }
 }
-
-
 
 module.exports = {createTask,getStartUps,getStartUpsByName,getCategory}
